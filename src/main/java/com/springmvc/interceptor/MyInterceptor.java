@@ -9,27 +9,32 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 public class MyInterceptor extends HandlerInterceptorAdapter{
 
+	private double luck=0;
 	
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
-		
-		
-		return super.preHandle(request, response, handler);
+		System.out.println("MyInterceptor-preHandle");
+		luck=Math.random()*10;
+		System.out.println("Your Luck out of 10 is: "+luck);
+		if(luck<5)
+		{
+			return false;
+		}
+		return true;
 	}
 
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
+		System.out.println("MyInterceptor-postHandle");
 		
-		super.postHandle(request, response, handler, modelAndView);
 	}
 
 	@Override
 	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
 			throws Exception {
+		System.out.println("MyInterceptor-afterCompletion");
 		
-		super.afterCompletion(request, response, handler, ex);
 	}
-	
 }
