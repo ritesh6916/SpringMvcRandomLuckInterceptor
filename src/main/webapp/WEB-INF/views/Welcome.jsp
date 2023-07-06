@@ -17,8 +17,8 @@
   <body>
   
 	<div align="center" class="m-5">
-		<h1>Congratulation!!</h1>
-		<h2>welcome ${name} you passed the Interceptor </h2>
+		<h1 class="text-warning">Congratulation!!</h1>
+		<h2 class="text-success">welcome ${name} you passed the Interceptor </h2>
 		<h5>your luck score was: ${score}</h5>
 	</div>
 

@@ -17,10 +17,10 @@
   <body>
   
 	<div align="center" class="m-5" >
-		<h1>Oh!! Sorry</h1>
-		<h2>${msg}</h2>
+		<h1 class="text-danger">Oh!! Sorry</h1>
+		<h2 class="text-warning">${msg1}</h2>
 		<h3>Please Try After sometime...</h3>
-		<h5>your luck score was: ${score}</h5>
+		<h5 class="text-danger">${msg2}</h5>
 	</div>
 
 	<!-- Optional JavaScript -->

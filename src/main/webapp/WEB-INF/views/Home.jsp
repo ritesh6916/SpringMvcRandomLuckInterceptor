@@ -22,8 +22,8 @@
 				<h2>Welcome!! Please try your Luck with Interceptor</h2>
 			</div>
 			<div class="form-group col-md-6">
-					<h4><label for="fname">Enter your Name</label></h4><input type="text"
-						class="form-control" id="name" placeholder="Name" name="txtname">
+					<h4><label for="fname">Enter your Name</label></h4>
+					<input type="text" class="form-control" name="txtname">
 				</div>
 			</div>
 			<div align="center">
