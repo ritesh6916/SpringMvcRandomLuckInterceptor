@@ -1,8 +1,8 @@
 package com.springmvc.interceptor.exception;
 
-public class MyBadluckException extends Exception{
+public class BadluckException extends Exception{
 
-	public MyBadluckException() {
+	public BadluckException() {
 		// TODO Auto-generated constructor stub
 	}
 }
