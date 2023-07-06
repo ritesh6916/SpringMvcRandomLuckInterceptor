@@ -1,5 +1,7 @@
 package com.springmvc.interceptor.controllers;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,8 +17,10 @@ public class HomeController {
 	}
 	
 	@RequestMapping("welcome")
-	public String welcomeController(@RequestParam("txtname") String name, Model m)
+	public String welcomeController(@RequestParam("txtname") String name, Model m,HttpServletRequest req)
 	{
+		String score=""+req.getAttribute("score");
+		m.addAttribute("score",score);
 		m.addAttribute("name", name);
 		return "Welcome";
 	}
