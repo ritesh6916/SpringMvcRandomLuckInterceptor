@@ -10,14 +10,23 @@ public class MyExceptionHandler {
 	@ExceptionHandler(value = BadluckException.class)
 	public String badluckHandler(Model m )
 	{
-		m.addAttribute("msg","You are unlucky please try again...");
+		double luck=BadluckException.luckScore;
+		m.addAttribute("msg1","You are unlucky , you did't pass the Interceptor...");
+		m.addAttribute("msg2", "your luck score was: "+luck);
 		return "customErrorPage";
 	}
 	
 	@ExceptionHandler(NullPointerException.class)
 	public String nullPointerhandler(Model m)
 	{
-		m.addAttribute("msg","NullPointerExceptionOccured...");
+		m.addAttribute("msg1","NullPointerExceptionOccured...");
+		m.addAttribute("msg2","Please Fill your name..");
+		return "customErrorPage";
+	}
+	
+	public String genralExceptionHandler(Model m)
+	{
+		m.addAttribute("msg1","Something went wrong with server...");
 		return "customErrorPage";
 	}
 }
