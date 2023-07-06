@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class MyExceptionHandler {
 	
-	@ExceptionHandler(value = MyBadluckException.class)
+	@ExceptionHandler(value = BadluckException.class)
 	public String badluckHandler(Model m )
 	{
 		m.addAttribute("msg","You are unlucky please try again...");
