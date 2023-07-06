@@ -23,7 +23,7 @@ public class MyExceptionHandler {
 		m.addAttribute("msg2","Please Fill your name..");
 		return "customErrorPage";
 	}
-	
+	@ExceptionHandler(Exception.class)
 	public String genralExceptionHandler(Model m)
 	{
 		m.addAttribute("msg1","Something went wrong with server...");
